@@ -2,6 +2,8 @@ package com.company.BankManagement;
 
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.company.Exception.InvalidAccountType;
 import com.company.Exception.InvalidAccNumber;
@@ -54,14 +56,12 @@ public class Account {
     }
 
 
-    void NewAccount(Customer customer) {
-        Account newAcc = new Account();
-        customer.accounts.add(newAcc);
-    }
+
 
     void CurrencyConvertor() {
         ///
     }
+
 
 
 }

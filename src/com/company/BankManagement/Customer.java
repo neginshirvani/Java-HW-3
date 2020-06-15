@@ -13,6 +13,14 @@ public class Customer extends Person {
     }
 
 
-
+    void NewAccount(Customer customer) {
+        Account newAcc = new Account();
+        customer.accounts.add(newAcc);
+        List<Account> acc = new ArrayList<>();
+        acc = Safe.getAccounts();
+        acc.add(newAcc);
+        Safe.setAccounts(acc);
+        Safe.SafeBalance();
+    }
 
 }

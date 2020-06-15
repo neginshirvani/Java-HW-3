@@ -15,8 +15,8 @@ public class Transaction {
     void CardtoCard(Account a1, Account a2, BigDecimal money) {
         BigDecimal balance1 = a1.getBalance();
         BigDecimal balance2 = a2.getBalance();
-        balance1.subtract(money);
-        balance2.add(money);
+        balance1 = balance1.subtract(money);
+        balance2 = balance2.add(money);
         a1.setBalance(balance1);
         a2.setBalance(balance2);
 
@@ -25,7 +25,7 @@ public class Transaction {
 
     void DepositToAcc(Account a1, BigDecimal money) {
         BigDecimal balance = a1.getBalance();
-        balance.add(money);
+        balance = balance.add(money);
         a1.setBalance(balance);
     }
 
@@ -34,12 +34,11 @@ public class Transaction {
         Scanner cash = new Scanner(System.in);
         BigDecimal myCash = cash.nextBigDecimal();
         BigDecimal balance = a1.getBalance();
-        balance.subtract(myCash);
+        balance = balance.subtract(myCash);
         a1.setBalance(balance);
     }
 
-    void Loan(Bank b1) {
-        ///
-    }
+
+
 
 }
