@@ -7,16 +7,16 @@ public class Person {
     String name;
     String surName;
     String phoneNumber;
-    Date birthDate;
+//    Date birthDate;
     String livingAddress;
     GenderType gender;
     String nationalCode;
 
-    public Person(String name, String surName, String phoneNumber, Date birthDate, String livingAddress, GenderType gender) {
+    public Person(String name, String surName, String phoneNumber, String livingAddress, GenderType gender) {
         this.name = name;
         this.surName = surName;
         this.phoneNumber = phoneNumber;
-        this.birthDate = birthDate;
+//        this.birthDate = birthDate;
         this.livingAddress = livingAddress;
         this.gender = gender;
     }
@@ -61,9 +61,6 @@ public class Person {
         this.phoneNumber = phoneNumber;
     }
 
-    public void setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
-    }
 
     public void setLivingAddress(String livingAddress) {
         this.livingAddress = livingAddress;
@@ -75,8 +72,3 @@ public class Person {
 }
 
 
-enum GenderType {
-    MALE,
-    FEMALE,
-    OTHER;
-}

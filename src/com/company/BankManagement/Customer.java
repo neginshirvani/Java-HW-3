@@ -8,12 +8,12 @@ public class Customer extends Person {
     List<Account> accounts = new ArrayList<>();
     List<Transaction> transactions = new ArrayList<>();
 
-    public Customer(String name, String surName, String phoneNumber, Date birthDate, String livingAddress, GenderType gender) {
-        super(name, surName, phoneNumber, birthDate, livingAddress, gender);
+    public Customer(String name, String surName, String phoneNumber,  String livingAddress, GenderType gender) {
+        super(name, surName, phoneNumber, livingAddress, gender);
     }
 
 
-    void NewAccount(Customer customer) {
+    public void NewAccount(Customer customer) {
         Account newAcc = new Account();
         customer.accounts.add(newAcc);
         List<Account> acc = new ArrayList<>();

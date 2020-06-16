@@ -12,7 +12,7 @@ public class Transaction {
 
 
 
-    void CardtoCard(Account a1, Account a2, BigDecimal money) {
+    public void CardtoCard(Account a1, Account a2, BigDecimal money) {
         BigDecimal balance1 = a1.getBalance();
         BigDecimal balance2 = a2.getBalance();
         balance1 = balance1.subtract(money);
@@ -23,13 +23,13 @@ public class Transaction {
     }
 
 
-    void DepositToAcc(Account a1, BigDecimal money) {
+    public void DepositToAcc(Account a1, BigDecimal money) {
         BigDecimal balance = a1.getBalance();
         balance = balance.add(money);
         a1.setBalance(balance);
     }
 
-    void TakeCash(Account a1) {
+    public void TakeCash(Account a1) {
         System.out.println("How mush cash do you need?");
         Scanner cash = new Scanner(System.in);
         BigDecimal myCash = cash.nextBigDecimal();

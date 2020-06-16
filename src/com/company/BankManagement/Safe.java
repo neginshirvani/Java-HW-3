@@ -33,7 +33,7 @@ public class Safe {
         }
     }
 
-    void Loan(Account a1, BigDecimal money) {
+    public void Loan(Account a1, BigDecimal money) {
         BigDecimal balanceA = Safe.getBalance();
         balanceA = balanceA.subtract(money);
         BigDecimal accBalance = a1.getBalance();

@@ -12,7 +12,7 @@ public class Bank {
     String country;
     String branchName;
     List<Customer> customers = new ArrayList<>();
-    Safe safe;
+    //Safe safe;
 
     public Bank(String name, String address, String phoneNumber, String email, String city, String country, String branchName) {
         this.name = name;

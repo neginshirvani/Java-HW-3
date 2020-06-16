@@ -27,8 +27,8 @@ public class Banker extends Person {
 
     }
 
-    public Banker(String name, String surName, String phoneNumber, Date birthDate, String livingAddress, GenderType gender) {
-        super(name, surName, phoneNumber, birthDate, livingAddress, gender);
+    public Banker(String name, String surName, String phoneNumber, String livingAddress, GenderType gender) {
+        super(name, surName, phoneNumber, livingAddress, gender);
     }
 
     private boolean dateValidation() {
