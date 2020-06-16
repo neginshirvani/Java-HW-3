@@ -6,16 +6,16 @@ import java.util.List;
 
 public class Safe {
     Bank bank;
-    private static List<Account> accounts = new ArrayList<>();
+    static List<Account> accounts = new ArrayList<>();
     static BigDecimal balance;
 
     public static List<Account> getAccounts() {
         return accounts;
     }
 
-    public static void setAccounts(List<Account> accounts) {
-        Safe.accounts = accounts;
-    }
+//    public static void setAccounts(boolean accounts) {
+//        Safe.accounts = accounts;
+//    }
 
 
     public static BigDecimal getBalance() {

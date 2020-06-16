@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.List;
 
 public class Customer extends Person {
+
+
     List<Account> accounts = new ArrayList<>();
     List<Transaction> transactions = new ArrayList<>();
 
@@ -12,15 +14,24 @@ public class Customer extends Person {
         super(name, surName, phoneNumber, livingAddress, gender);
     }
 
+    public List<Account> getAccounts() {
+        return accounts;
+    }
 
-    public void NewAccount(Customer customer) {
+    public void setAccounts(List<Account> accounts) {
+        this.accounts = accounts;
+    }
+
+    public static void NewAccount(Customer customer) {
         Account newAcc = new Account();
         customer.accounts.add(newAcc);
-        List<Account> acc = new ArrayList<>();
-        acc = Safe.getAccounts();
-        acc.add(newAcc);
-        Safe.setAccounts(acc);
-        Safe.SafeBalance();
+        Safe.accounts.add(newAcc);
+//        List<Account> acc = new ArrayList<>();
+//        acc = Safe.getAccounts();
+//        acc.add(newAcc);
+//        Safe.setAccounts(acc);
+//        Safe.SafeBalance();
     }
+
 
 }

@@ -11,7 +11,7 @@ public class Bank {
     String city;
     String country;
     String branchName;
-    List<Customer> customers = new ArrayList<>();
+    public static List<Customer> customers = new ArrayList<>();
     //Safe safe;
 
     public Bank(String name, String address, String phoneNumber, String email, String city, String country, String branchName) {

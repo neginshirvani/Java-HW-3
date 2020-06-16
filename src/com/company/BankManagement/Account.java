@@ -2,6 +2,7 @@ package com.company.BankManagement;
 
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -108,7 +109,7 @@ public class Account {
                 System.out.println("Your converted money is " + money + "Rial");
                 break;
             case "5":
-                money = money.divide(BigDecimal.valueOf(0.882310));
+                money = money.divide(BigDecimal.valueOf(0.882310), 7, RoundingMode.CEILING);
                 System.out.println("Your converted money is " + money + "Dollar");
                 break;
             case "6":
@@ -124,11 +125,11 @@ public class Account {
                 System.out.println("Your converted money is " + money + "Rial");
                 break;
             case "9":
-                money = money.divide(BigDecimal.valueOf(0.790900));
+                money = money.divide(BigDecimal.valueOf(0.790900), 7, RoundingMode.CEILING);
                 System.out.println("Your converted money is " + money + "Dollar");
                 break;
             case "10":
-                money = money.divide(BigDecimal.valueOf(1116));
+                money = money.divide(BigDecimal.valueOf(1116), 7, RoundingMode.CEILING);
                 System.out.println("Your converted money is " + money + "Euro");
                 break;
             case "11":
@@ -140,15 +141,15 @@ public class Account {
                 System.out.println("Your converted money is " + money + "Rial");
                 break;
             case "13":
-                money = money.divide(BigDecimal.valueOf(3.673));
+                money = money.divide(BigDecimal.valueOf(3.673), 7, RoundingMode.CEILING);
                 System.out.println("Your converted money is " + money + "Dollar");
                 break;
             case "14":
-                money = money.divide(BigDecimal.valueOf(4.622627));
+                money = money.divide(BigDecimal.valueOf(4.622627), 7, RoundingMode.CEILING);
                 System.out.println("Your converted money is " + money + "Euro");
                 break;
             case "15":
-                money = money.divide(BigDecimal.valueOf(0.216193));
+                money = money.divide(BigDecimal.valueOf(0.216193), 7, RoundingMode.CEILING);
                 System.out.println("Your converted money is " + money + "Pound");
                 break;
             case "16":
@@ -156,19 +157,19 @@ public class Account {
                 System.out.println("Your converted money is " + money + "Rial");
                 break;
             case "17":
-                money = money.divide(BigDecimal.valueOf(182110));
+                money = money.divide(BigDecimal.valueOf(182110), 7, RoundingMode.CEILING);
                 System.out.println("Your converted money is " + money + "Dollar");
                 break;
             case "18":
-                money = money.divide(BigDecimal.valueOf(202000));
+                money = money.divide(BigDecimal.valueOf(202000), 7, RoundingMode.CEILING);
                 System.out.println("Your converted money is " + money + "Euro");
                 break;
             case "19":
-                money = money.divide(BigDecimal.valueOf(215909));
+                money = money.divide(BigDecimal.valueOf(215909), 7, RoundingMode.CEILING);
                 System.out.println("Your converted money is " + money + "Pound");
                 break;
             case "20":
-                money = money.divide(BigDecimal.valueOf(48224));
+                money = money.divide(BigDecimal.valueOf(48224), 7, RoundingMode.CEILING);
                 System.out.println("Your converted money is " + money + "Derham");
                 break;
 
