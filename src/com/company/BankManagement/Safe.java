@@ -33,13 +33,18 @@ public class Safe {
         }
     }
 
-    public void Loan(Account a1, BigDecimal money) {
-        BigDecimal balanceA = Safe.getBalance();
-        balanceA = balanceA.subtract(money);
-        BigDecimal accBalance = a1.getBalance();
-        accBalance = accBalance.add(money);
-        a1.setBalance(accBalance);
-        Safe.setBalance(balanceA);
+    public static void Loan(Account a1, BigDecimal money) {
+        if (Safe.getBalance().compareTo(money) >= 0) {
+            BigDecimal balanceA = Safe.getBalance();
+            balanceA = balanceA.subtract(money);
+            BigDecimal accBalance = a1.getBalance();
+            accBalance = accBalance.add(money);
+            a1.setBalance(accBalance);
+            Safe.setBalance(balanceA);
+        }
+        else {
+            System.out.println("Sry there is no enough money in the Safe");
+        }
     }
 
 

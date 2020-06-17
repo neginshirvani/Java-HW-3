@@ -3,8 +3,6 @@ package com.company.BankManagement;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 import com.company.Exception.InvalidAccountType;
@@ -18,6 +16,18 @@ public class Account {
     Bank bank;
     Banker banker;
     Customer customer;
+
+
+
+
+    public Account(AccountType type, BigDecimal balance, String accNumber, String chequeBookId) {
+        this.type = type;
+        this.balance = balance;
+        this.accNumber = accNumber;
+        this.chequeBookId = chequeBookId;
+//        this.bank = bank;
+//        this.banker = banker;
+    }
 
     public void setType(AccountType type) throws InvalidAccountType {
         if (!AccountTypevalidation(type)) {
@@ -185,7 +195,3 @@ public class Account {
 }
 
 
-enum AccountType {
-    CHECKINGACCOUNT,
-    SAVINGACCOUNT,
-}

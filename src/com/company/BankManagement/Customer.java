@@ -1,8 +1,9 @@
 package com.company.BankManagement;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 public class Customer extends Person {
 
@@ -23,7 +24,21 @@ public class Customer extends Person {
     }
 
     public static void NewAccount(Customer customer) {
-        Account newAcc = new Account();
+        System.out.println("Fill in the form below");
+        System.out.println("Account type: ");
+        Scanner t = new Scanner(System.in);
+        AccountType acctype = AccountType.valueOf(t.next());
+        System.out.println("How much money do you want to start with ");
+        Scanner b = new Scanner(System.in);
+        BigDecimal balance = b.nextBigDecimal();
+        System.out.println("Acc number: ");
+        Scanner an = new Scanner(System.in);
+        String accnum = an.next();
+        System.out.println("ChequeBookId: ");
+        Scanner ch = new Scanner(System.in);
+        String chbid = ch.next();
+
+        Account newAcc = new Account(acctype, balance, accnum, chbid);
         customer.accounts.add(newAcc);
         Safe.accounts.add(newAcc);
 //        List<Account> acc = new ArrayList<>();
